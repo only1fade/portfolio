@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 import aboutImg from "../assets/about-new.png";
 
-export function PersistentBackground({ containerRef }: { containerRef?: React.RefObject<HTMLElement> }) {
+export function PersistentBackground({ containerRef }: { containerRef?: any }) {
   const { scrollYProgress } = useScroll({
     target: containerRef || undefined,
     offset: ["start start", "end end"]
