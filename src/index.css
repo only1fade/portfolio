@@ -27,11 +27,12 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
   body {
     @apply font-sans transition-colors duration-300 text-neutral-200 theme-bg;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   .theme-bg {
