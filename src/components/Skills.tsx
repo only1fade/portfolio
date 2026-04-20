@@ -53,7 +53,7 @@ export function Skills() {
   // Skills reveal only starts after the section is 30% into the viewport
   // Precision Horizontal Spread (Clearing the 400px monitor)
   const spreadXLeft = useTransform(scrollYProgress, [0.3, 0.7], ["150px", "0px"]);
-  const spreadXRight = useTransform(scrollYProgress, [0.3, 0.7], ["-200px", "-170px"]);
+  const spreadXRight = useTransform(scrollYProgress, [0.3, 0.7], ["-200px", "clamp(-80px, -12vw, -170px)"]);
   
   // Vertical Framing (Matching the PHP/Python tags vs the JS/CSS tags)
   const yTop = useTransform(scrollYProgress, [0.3, 0.7], ["100px", "-40px"]);
@@ -74,7 +74,7 @@ export function Skills() {
     <section 
       id="skills" 
       ref={sectionRef}
-      className="min-h-screen flex flex-col justify-center py-0 px-8 md:px-12 lg:px-24 pl-32 sm:pl-44 md:pl-56 lg:pl-72 relative scroll-mt-24"
+      className="min-h-screen flex flex-col justify-center py-0 px-8 md:px-12 lg:px-24 pl-32 sm:pl-44 md:pl-56 lg:pl-72 relative scroll-mt-24 overflow-x-hidden"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-y-32 gap-x-12 max-w-4xl w-full mx-auto">
         {skillCategories.map((category, idx) => (
