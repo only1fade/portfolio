@@ -83,6 +83,22 @@
   body::before {
     position: fixed;
   }
+
+  /* Mobile: background-attachment: fixed is broken on touch devices and causes
+     a black gap flash when fast-scrolling. Switch to scroll on coarse pointers. */
+  @media (pointer: coarse) {
+    .theme-bg {
+      background-attachment: scroll;
+    }
+    .theme-bg::before {
+      background-attachment: scroll;
+      position: absolute;
+      min-height: 100%;
+    }
+    body::before {
+      background-attachment: scroll;
+    }
+  }
   .dark body {
     @apply bg-parchment-dark text-parchment transition-colors duration-300;
   }
