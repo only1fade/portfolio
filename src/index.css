@@ -29,12 +29,11 @@
     scroll-behavior: smooth;
     overflow-x: clip;
     overscroll-behavior: none;
-    background-color: #000000;
   }
   body {
     @apply font-sans transition-colors duration-300 text-neutral-200;
     background-color: #000000;
-    min-height: 100svh;
+    min-height: 100vh;
     overflow-x: clip;
     overscroll-behavior: none;
   }
