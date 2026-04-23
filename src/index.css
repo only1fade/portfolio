@@ -32,7 +32,7 @@
   body {
     @apply font-sans transition-colors duration-300 text-neutral-200;
     background-color: #000000;
-    min-height: 100vh;
+    min-height: 100svh;
     overflow-x: clip;
   }
 

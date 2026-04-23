@@ -44,7 +44,7 @@ export function Hero() {
   }, [cmdIndex, isStarted]);
 
   return (
-    <section className="relative w-full h-screen flex flex-col justify-center overflow-hidden px-8 md:px-12 lg:pr-16 lg:pl-72" id="home">
+    <section className="relative w-full flex flex-col justify-center overflow-hidden px-8 md:px-12 lg:pr-16 lg:pl-72" style={{ height: '100svh', minHeight: '100vh' }} id="home">
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-[1440px] w-full">
         {/* Left Column: Text Content */}
         <div className="flex flex-col items-start text-left">
