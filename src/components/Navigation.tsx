@@ -95,21 +95,34 @@ export function Navigation() {
       {/* Mobile Hamburger Toggle */}
       <button
         onClick={() => setIsMobileOpen(!isMobileOpen)}
-        className="fixed top-6 left-6 z-[60] p-2.5 bg-neutral-900/80 backdrop-blur-md border border-white/10 rounded-xl text-white lg:hidden shadow-2xl transition-all hover:bg-neutral-800 flex flex-col justify-center items-center w-10 h-10 gap-1.5 overflow-hidden"
+        className="fixed top-6 left-6 z-[60] p-2.5 bg-neutral-900/80 backdrop-blur-md border border-white/10 rounded-xl text-white lg:hidden shadow-2xl transition-all hover:bg-neutral-800 flex flex-col justify-center items-center w-10 h-10 overflow-hidden"
         aria-label="Toggle Menu"
       >
-        <motion.span 
-          animate={{ rotate: isMobileOpen ? 45 : 0, y: isMobileOpen ? 8 : 0 }} 
-          className={`block h-0.5 w-5 rounded-full transition-colors duration-300 transform origin-center ${isMobileOpen ? 'bg-purple-400' : 'bg-neutral-300'}`} 
-        />
-        <motion.span 
-          animate={{ opacity: isMobileOpen ? 0 : 1 }} 
-          className={`block h-0.5 w-5 rounded-full transition-colors duration-300 ${isMobileOpen ? 'bg-purple-400' : 'bg-neutral-300'}`} 
-        />
-        <motion.span 
-          animate={{ rotate: isMobileOpen ? -45 : 0, y: isMobileOpen ? -8 : 0 }} 
-          className={`block h-0.5 w-5 rounded-full transition-colors duration-300 transform origin-center ${isMobileOpen ? 'bg-purple-400' : 'bg-neutral-300'}`} 
-        />
+        <div className="flex flex-col items-start justify-center gap-1.5 w-[24px]">
+          <motion.span 
+            animate={{ 
+              rotate: isMobileOpen ? 45 : 0, 
+              y: isMobileOpen ? 8 : 0,
+              width: isMobileOpen ? 24 : 24
+            }} 
+            className={`block h-[2px] rounded-full transition-colors duration-300 transform origin-center ${isMobileOpen ? 'bg-purple-400' : 'bg-neutral-300'}`} 
+          />
+          <motion.span 
+            animate={{ 
+              opacity: isMobileOpen ? 0 : 1,
+              width: isMobileOpen ? 24 : 18
+            }} 
+            className={`block h-[2px] rounded-full transition-colors duration-300 ${isMobileOpen ? 'bg-purple-400' : 'bg-neutral-300'}`} 
+          />
+          <motion.span 
+            animate={{ 
+              rotate: isMobileOpen ? -45 : 0, 
+              y: isMobileOpen ? -8 : 0,
+              width: isMobileOpen ? 24 : 12
+            }} 
+            className={`block h-[2px] rounded-full transition-colors duration-300 transform origin-center ${isMobileOpen ? 'bg-purple-400' : 'bg-neutral-300'}`} 
+          />
+        </div>
       </button>
 
       {/* Main Drawer */}
