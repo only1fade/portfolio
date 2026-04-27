@@ -60,9 +60,9 @@ function ScrollToTopOrHash() {
 
 function Layout() {
   return (
-    <div className="min-h-[100dvh] relative w-full flex flex-col items-center">
-      {/* Fixed viewport background — more reliable than background-attachment:fixed on mobile */}
-      <div className="fixed inset-0 -z-10 theme-bg" aria-hidden="true" />
+    <div className="min-h-[100svh] relative w-full flex flex-col items-center">
+      {/* Fixed viewport background — extended to prevent gaps when mobile address bar hides */}
+      <div className="fixed -top-[20vh] -bottom-[20vh] left-0 right-0 -z-10 theme-bg" aria-hidden="true" />
       <ScrollToTopOrHash />
       <Navigation />
       <div className="w-full relative flex flex-col flex-grow">
