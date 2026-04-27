@@ -60,7 +60,7 @@ function ScrollToTopOrHash() {
 
 function Layout() {
   return (
-    <div className="relative w-full flex flex-col items-center" style={{ minHeight: '100svh' }}>
+    <div className="min-h-screen relative w-full flex flex-col items-center">
       {/* Fixed viewport background — more reliable than background-attachment:fixed on mobile */}
       <div className="fixed inset-0 -z-10 theme-bg" aria-hidden="true" />
       <ScrollToTopOrHash />

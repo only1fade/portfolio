@@ -28,15 +28,12 @@
   html {
     scroll-behavior: smooth;
     overflow-x: clip;
-    background-color: #000000;
-    overscroll-behavior-y: none;
   }
   body {
     @apply font-sans transition-colors duration-300 text-neutral-200;
     background-color: #000000;
-    min-height: 100svh;
+    min-height: 100vh;
     overflow-x: clip;
-    overscroll-behavior-y: none;
   }
 
   .theme-bg {
