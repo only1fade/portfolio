@@ -95,7 +95,7 @@ export function Navigation() {
       {/* Mobile Hamburger Toggle */}
       <button
         onClick={() => setIsMobileOpen(!isMobileOpen)}
-        className="fixed top-6 left-6 z-[60] p-2.5 bg-neutral-900/80 backdrop-blur-md border border-white/10 rounded-xl text-white lg:hidden shadow-2xl transition-all hover:bg-neutral-800 flex flex-col justify-center items-center w-10 h-10 overflow-hidden"
+        className="fixed top-6 left-6 z-[60] p-2.5 bg-neutral-900/80 backdrop-blur-md rounded-xl text-white lg:hidden shadow-2xl transition-all hover:bg-neutral-800 flex flex-col justify-center items-center w-10 h-10 overflow-hidden"
         aria-label="Toggle Menu"
       >
         <div className="flex flex-col items-start justify-center gap-1.5 w-[24px]">
