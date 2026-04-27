@@ -28,20 +28,20 @@
   html {
     scroll-behavior: smooth;
     overflow-x: clip;
-    background-color: #000000;
     overscroll-behavior-y: none;
   }
   body {
     @apply font-sans transition-colors duration-300 text-neutral-200;
-    background-color: #000000;
     min-height: 100svh;
     overflow-x: clip;
     overscroll-behavior-y: none;
   }
 
   .theme-bg {
-    background-color: #000000;
+    background-color: #030303;
     background-image:
+      radial-gradient(circle at 50% -10%, rgba(139, 92, 246, 0.12) 0%, transparent 60%),
+      radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
       radial-gradient(ellipse 55% 45% at 15% 10%, rgba(255, 255, 255, 0.08) 0%, transparent 70%),
       radial-gradient(ellipse 50% 40% at 5% 85%,  #010101 0%, transparent 70%),
       radial-gradient(ellipse 45% 35% at 25% 60%, rgba(255, 255, 255, 0.06) 0%, transparent 65%),
