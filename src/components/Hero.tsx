@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Database, Server, Component, Smartphone, LayoutTemplate, Mail, Briefcase, ChevronDown } from "lucide-react";
+import { Database, Server, Component, Smartphone, LayoutTemplate, Mail, LayoutGrid, ChevronDown } from "lucide-react";
 import heroVideo from "../assets/hero-section.mp4";
 
 
@@ -188,7 +188,7 @@ export function Hero() {
               href="#workbench"
               className="flex items-center gap-1.5 sm:gap-3 px-2.5 sm:px-6 h-8 sm:h-10 bg-purple-500/10 border border-purple-500/30 text-purple-400 rounded-md shadow-sm hover:bg-purple-500/20 hover:border-purple-500/50 transition-all group whitespace-nowrap shrink-0"
             >
-              <Briefcase className="w-3 h-3 sm:w-4 sm:h-4 group-hover:scale-110 transition-transform" />
+              <LayoutGrid className="w-3 h-3 sm:w-4 sm:h-4 group-hover:scale-110 transition-transform" />
               <span className="font-montserrat text-[8px] sm:text-xs uppercase tracking-wider sm:tracking-[0.2em] font-medium hidden xs:block sm:block">Projects</span>
             </a>
           </motion.div>

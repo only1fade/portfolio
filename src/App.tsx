@@ -3,6 +3,7 @@ import { Navigation } from './components/Navigation'
 import { Hero } from './components/Hero'
 import { About } from './components/About'
 import { ProjectGrid } from './components/ProjectGrid'
+import { Experience } from './components/Experience'
 import { Skills } from './components/Skills'
 import { Footer } from './components/Footer'
 import { PersistentBackground } from './components/PersistentBackground'
@@ -87,6 +88,7 @@ function Home() {
         <Skills />
       </div>
       <ProjectGrid />
+      <Experience />
     </>
   )
 }
