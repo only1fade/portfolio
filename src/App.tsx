@@ -12,6 +12,7 @@ import { useRef, useEffect, lazy, Suspense } from 'react'
 import { useLocation } from 'react-router-dom'
 
 const ProjectPage = lazy(() => import('./components/ProjectPage').then(module => ({ default: module.ProjectPage })))
+const AllProjects = lazy(() => import('./components/AllProjects').then(module => ({ default: module.AllProjects })))
 
 function ScrollToTopOrHash() {
   const location = useLocation();
@@ -102,6 +103,11 @@ function App() {
           <Route path="project/:projectId" element={
             <Suspense fallback={<div className="min-h-screen w-full flex items-center justify-center text-neutral-500">Loading details...</div>}>
               <ProjectPage />
+            </Suspense>
+          } />
+          <Route path="projects" element={
+            <Suspense fallback={<div className="min-h-screen w-full flex items-center justify-center text-neutral-500">Loading projects...</div>}>
+              <AllProjects />
             </Suspense>
           } />
         </Route>

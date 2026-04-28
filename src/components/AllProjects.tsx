@@ -1,45 +1,7 @@
 import { motion, type Variants } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import uptodateImg from "../assets/uptodate.png";
-import htlBackendImg from "../assets/htl backend.png";
-import b2b2cImg from "../assets/b2b2c.png";
-
-export type Project = {
-  id: string; // Changed to string for URL usage
-  title: string;
-  badges: string[];
-  description: string;
-  image?: string;
-  link?: string;
-};
-
-export const projects: Project[] = [
-  {
-    id: "uptodate",
-    title: "UpToDate Dashboard",
-    badges: ["React", "Tailwind CSS", "Dashboard", "Gmail API"],
-    description: "Sleek, dark-mode first receipt management application featuring automated and manual Gmail integration for dispatching receipts directly to both senders and recipients.",
-    image: uptodateImg,
-    link: "#"
-  },
-  {
-    id: "htl-backend",
-    title: "HTL Backend Architecture",
-    badges: ["Node.js", "API", "Database", "Backend"],
-    description: "A robust and scalable backend architecture tailored for hotel and restaurant management, handling complex data relationships and booking systems.",
-    image: htlBackendImg,
-    link: "#"
-  },
-  {
-    id: "b2b2c",
-    title: "B2B2C Mobile App",
-    badges: ["React Native", "Expo", "Mobile", "E-commerce"],
-    description: "A versatile multivendor mobile platform connecting users with food delivery, ride-hailing, and logistics services, featuring seamless cross-vendor collaboration.",
-    image: b2b2cImg,
-    link: "#"
-  }
-];
+import { projects } from "./ProjectGrid";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -51,30 +13,33 @@ const container: Variants = {
   }
 };
 
-export function ProjectGrid() {
+export function AllProjects() {
   return (
-    <section className="w-full py-16 px-8 md:px-12 lg:pr-16 lg:pl-72" id="workbench">
-      <div className="w-full max-w-5xl">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-16"
+    <motion.div 
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="w-full pt-28 pb-16 px-8 md:px-12 lg:pr-16 lg:pl-72 min-h-[100svh]"
+    >
+      <div className="w-full max-w-5xl mx-auto">
+        <Link 
+          to="/#workbench" 
+          className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors mb-8 font-sans text-sm tracking-wide group"
         >
-          <h2 className="text-xl md:text-2xl font-montserrat font-light text-white uppercase tracking-[0.3em]">
-            Workbench
-          </h2>
-        </motion.div>
+          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+          Back to Home
+        </Link>
+
+        <h1 className="text-3xl md:text-5xl font-bold text-white mb-12 tracking-tight">All Projects</h1>
 
         <motion.div 
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 gap-8"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {projects.filter(p => p.id === 'b2b2c').map((project) => (
+          {projects.map((project) => (
             <motion.div 
               key={project.id} 
               variants={{
@@ -85,7 +50,7 @@ export function ProjectGrid() {
               <Link to={`/project/${project.id}`} className="block h-full group">
                 <div className="glass-card glass-card-hover rounded-xl overflow-hidden h-full flex flex-col cursor-pointer bg-neutral-900/40 border border-neutral-800 backdrop-blur-sm transition-all duration-300 hover:border-neutral-700 hover:bg-neutral-800/50 hover:shadow-2xl hover:shadow-purple-900/20">
                   {/* Project Image Area */}
-                  <div className="w-full h-64 md:h-80 bg-neutral-950/80 relative overflow-hidden transition-colors duration-500 flex items-center justify-center">
+                  <div className="w-full h-48 bg-neutral-950/80 relative overflow-hidden transition-colors duration-500 flex items-center justify-center">
                     {project.image ? (
                       <img 
                         src={project.image} 
@@ -125,25 +90,7 @@ export function ProjectGrid() {
             </motion.div>
           ))}
         </motion.div>
-
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 flex justify-start"
-        >
-          <Link 
-            to="/projects" 
-            className="group flex items-center gap-3 px-8 py-3.5 bg-neutral-900 border border-neutral-700 hover:border-purple-500 hover:bg-neutral-800 text-white rounded-xl transition-all duration-300 font-sans uppercase tracking-widest text-xs font-bold shadow-xl"
-          >
-            View All Projects
-            <ExternalLink className="w-4 h-4 group-hover:text-purple-400 group-hover:translate-x-1 transition-all" />
-          </Link>
-        </motion.div>
       </div>
-    </section>
+    </motion.div>
   );
 }
-
-
