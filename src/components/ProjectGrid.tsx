@@ -83,9 +83,9 @@ export function ProjectGrid() {
               }}
             >
               <Link to={`/project/${project.id}`} className="block h-full group">
-                <div className="glass-card glass-card-hover rounded-xl overflow-hidden h-full flex flex-col cursor-pointer bg-neutral-900/40 border border-neutral-800 backdrop-blur-sm transition-all duration-300 hover:border-neutral-700 hover:bg-neutral-800/50 hover:shadow-2xl hover:shadow-purple-900/20">
+                <div className="glass-card glass-card-hover rounded-xl overflow-hidden h-full flex flex-col md:flex-row cursor-pointer bg-neutral-900/40 border border-neutral-800 backdrop-blur-sm transition-all duration-300 hover:border-neutral-700 hover:bg-neutral-800/50 hover:shadow-2xl hover:shadow-purple-900/20">
                   {/* Project Image Area */}
-                  <div className="w-full h-64 md:h-80 bg-neutral-950/80 relative overflow-hidden transition-colors duration-500 flex items-center justify-center">
+                  <div className="w-full md:w-1/2 h-64 md:h-auto min-h-[300px] md:min-h-[400px] bg-neutral-950/80 relative overflow-hidden transition-colors duration-500 flex items-center justify-center shrink-0 border-b md:border-b-0 md:border-r border-neutral-800/50">
                     {project.image ? (
                       <img 
                         src={project.image} 
@@ -100,22 +100,22 @@ export function ProjectGrid() {
                       </div>
                     )}
                     {/* Subtle Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 border-b border-neutral-800/50 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-neutral-900 border-b border-neutral-800/50 via-transparent to-transparent opacity-80 pointer-events-none"></div>
                   </div>
 
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="text-xl font-bold text-neutral-100 mb-3 tracking-tight group-hover:text-purple-400 transition-colors">{project.title}</h3>
-                    <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="p-8 md:p-12 flex-1 flex flex-col justify-center">
+                    <h3 className="text-2xl md:text-3xl font-bold text-neutral-100 mb-4 tracking-tight group-hover:text-purple-400 transition-colors">{project.title}</h3>
+                    <div className="flex flex-wrap gap-2 mb-6">
                       {project.badges.map((badge) => (
                         <span key={badge} className="text-[10px] bg-neutral-800/60 text-neutral-300 border border-neutral-700 px-2.5 py-1 rounded-full font-sans font-medium tracking-wide">
                           {badge}
                         </span>
                       ))}
                     </div>
-                    <p className="text-sm text-neutral-400 leading-relaxed font-sans mb-6 flex-1">
+                    <p className="text-base md:text-lg text-neutral-400 leading-relaxed font-sans mb-10 flex-1">
                       {project.description}
                     </p>
-                    <div className="mt-auto flex items-center justify-between border-t border-neutral-800/60 pt-4 group-hover:border-neutral-700/60 transition-colors">
+                    <div className="mt-auto flex items-center justify-between border-t border-neutral-800/60 pt-6 group-hover:border-neutral-700/60 transition-colors">
                       <span className="text-xs font-semibold uppercase tracking-wider text-neutral-500 group-hover:text-neutral-300 transition-colors">View Project</span>
                       <ExternalLink className="w-4 h-4 text-neutral-600 group-hover:text-purple-400 transition-colors transform group-hover:scale-110 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 duration-300" />
                     </div>
