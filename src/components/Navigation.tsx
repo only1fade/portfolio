@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Home, User, LayoutGrid, Cpu, Phone, ChevronRight } from "lucide-react";
+import { Home, User, LayoutGrid, Cpu, Phone, ChevronRight, Briefcase } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 export function Navigation() {
@@ -23,7 +23,8 @@ export function Navigation() {
         { name: "HTL Backend", href: "/project/htl-backend" },
         { name: "B2B2C", href: "/project/b2b2c" }
       ]
-    }
+    },
+    { name: "Experience", href: "/#experience", icon: Briefcase }
   ];
 
   useEffect(() => {
