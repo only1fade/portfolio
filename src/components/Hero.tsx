@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Database, Server, Component, Smartphone, LayoutTemplate, Mail, LayoutGrid, ChevronDown } from "lucide-react";
-import heroVideo from "../assets/hero-section.mp4";
+
 
 
 
@@ -71,10 +71,10 @@ export function Hero() {
                   className="flex flex-col items-center leading-none gap-0.5 mb-2"
                 >
                   <span className="font-montserrat font-light text-[9px] sm:text-sm md:text-base tracking-[0.4em] text-neutral-400 normal-case">
-                    olajide
+                    maryam
                   </span>
                   <span className="font-montserrat font-light text-[9px] sm:text-sm md:text-base tracking-[0.4em] text-neutral-500 normal-case">
-                    emmanuel
+                    oderinde
                   </span>
                 </motion.div>
 
@@ -144,9 +144,6 @@ export function Hero() {
             >
               <span className="inline-block sm:whitespace-nowrap">. architecting systems that stay up,</span> <br className="hidden sm:block" />
               <span className="inline-block sm:whitespace-nowrap">scale quietly, and rarely wake me up .</span>
-              <span className="relative sm:absolute block sm:flex mt-4 sm:mt-0 left-0 sm:left-[3rem] md:left-[6rem] lg:left-[8rem] top-0 sm:top-[4.5rem] text-purple-500 font-bold text-3xl sm:text-5xl font-changa opacity-80 items-baseline gap-2">
-                5+ <span className="font-montserrat font-light text-xs sm:text-base md:text-lg tracking-[0.3em] text-neutral-500 normal-case">years</span>
-              </span>
             </motion.p>
           </div>
 
@@ -157,7 +154,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 1.4 }}
             className="font-montserrat font-light text-xs md:text-sm tracking-[0.3em] text-neutral-500 normal-case mb-4"
           >
-            Lagos based / Abuja based . Remote Developer
+            Remote Software Developer
           </motion.p>
 
           {/* Unified Action Row: Tech Bar + Buttons - Side-by-Side */}
@@ -248,27 +245,6 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Right Column: Inverted Video Background */}
-        <motion.div 
-          initial={{ opacity: 0, x: 120 }}
-          whileInView={{ opacity: 0.3, x: 64 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.5, ease: "easeOut", delay: 1.8 }}
-          className="hidden lg:block relative h-full w-full max-w-xl mx-auto"
-        >
-          <video 
-            src={heroVideo}
-            autoPlay 
-            loop 
-            muted 
-            playsInline
-            className="w-full h-auto object-contain invert grayscale"
-            style={{ 
-              maskImage: 'radial-gradient(circle, black 20%, transparent 80%)',
-              WebkitMaskImage: 'radial-gradient(circle, black 20%, transparent 80%)'
-            }}
-          />
-        </motion.div>
       </div>
     </section>
   );
@@ -277,7 +253,7 @@ export function Hero() {
 function TechIcon({ icon: Icon, label }: { icon: any; label: string }) {
   return (
     <div className="group flex flex-col items-center cursor-default">
-      <Icon className="w-8 h-8 text-neutral-400 transition-colors duration-300 group-hover:text-oxblood" strokeWidth={1.5} />
+      <Icon className="w-8 h-8 text-neutral-400 transition-colors duration-300 group-hover:text-purple-500" strokeWidth={1.5} />
       <span className="sr-only">{label}</span>
     </div>
   );

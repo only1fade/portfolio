@@ -207,10 +207,12 @@ export function Navigation() {
           })}
         </div>
 
-        {/* Contact Info */}
-        <div className="mt-12 flex flex-col items-center w-full font-sans text-[9px] font-bold tracking-widest text-neutral-400 uppercase">
+        {/* Contact Info - Hidden for now */}
+        <div className="hidden mt-12 flex-col items-center w-full font-sans text-[9px] font-bold tracking-widest text-neutral-400 uppercase">
           <a 
-            href="tel:+2349019828794"
+            href="https://wa.me/2349019828794"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-2.5 py-2 w-full flex flex-row items-center justify-start gap-3 rounded-lg border border-transparent transition-all duration-300 hover:bg-white/5 hover:border-white/10 hover:shadow-sm hover:text-white"
           >
             <Phone className="w-3.5 h-3.5 shrink-0 text-purple-400 transition-colors duration-300" strokeWidth={2} />

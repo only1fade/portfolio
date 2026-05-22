@@ -2,8 +2,8 @@ import { motion, type Variants } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import uptodateImg from "../assets/uptodate.png";
-import htlBackendImg from "../assets/htl backend.png";
-import b2b2cImg from "../assets/b2b2c.png";
+import htlBackendImg from "../assets/htl_main.png";
+import b2b2cImg from "../assets/b2b2c_v2.png";
 
 export type Project = {
   id: string; // Changed to string for URL usage
