@@ -71,10 +71,10 @@ export function Hero() {
                   className="flex flex-col items-center leading-none gap-0.5 mb-2"
                 >
                   <span className="font-montserrat font-light text-[9px] sm:text-sm md:text-base tracking-[0.4em] text-neutral-400 normal-case">
-                    maryam
+                    olajide
                   </span>
                   <span className="font-montserrat font-light text-[9px] sm:text-sm md:text-base tracking-[0.4em] text-neutral-500 normal-case">
-                    oderinde
+                    emmanuel
                   </span>
                 </motion.div>
 

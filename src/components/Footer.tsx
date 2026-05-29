@@ -71,7 +71,7 @@ export function Footer() {
       
       <div className="flex flex-col items-center w-full mt-32 text-neutral-500">
         <p className="font-montserrat font-light text-xs md:text-sm tracking-wide mb-6 text-center">
-          © 2026 • Maryam Oderinde • All rights reserved
+          © 2026 • Olajide Emmanuel • All rights reserved
         </p>
         <div className="flex space-x-8 items-center">
           <a href="#" className="hover:text-purple-400 transition-colors" aria-label="Github">
