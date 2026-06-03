@@ -1,6 +1,7 @@
 import { motion, type Variants } from "framer-motion";
 import { ExternalLink, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ImageWithSkeleton } from "./Skeleton";
 import { projects } from "./ProjectGrid";
 
 const container: Variants = {
@@ -52,11 +53,10 @@ export function AllProjects() {
                   {/* Project Image Area */}
                   <div className="w-full h-48 bg-neutral-950/80 relative overflow-hidden transition-colors duration-500 flex items-center justify-center">
                     {project.image ? (
-                      <img 
-                        src={project.image} 
-                        alt={project.title} 
-                        loading="lazy"
-                        decoding="async"
+                      <ImageWithSkeleton
+                        src={project.image}
+                        alt={project.title}
+                        wrapperClassName="absolute inset-0"
                         className="absolute inset-0 w-full h-full object-cover scale-150 opacity-80 group-hover:opacity-100 group-hover:scale-[1.65] transition-all duration-700 ease-in-out origin-center"
                       />
                     ) : (

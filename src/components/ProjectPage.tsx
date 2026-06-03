@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, X, ZoomIn } from "lucide-react";
+import { ImageWithSkeleton } from "./Skeleton";
 import { FaGithub } from "react-icons/fa";
 import uptodateImg from "../assets/uptodate.png";
 import htlBackendImg from "../assets/htl_main.png";
@@ -185,9 +186,9 @@ export function ProjectPage() {
 
         {project.image && (
           <div className="w-full h-[40vh] md:h-[60vh] bg-neutral-900 rounded-2xl overflow-hidden mb-12 relative border border-neutral-800 shadow-2xl glass-card">
-            <img 
-              src={project.image} 
-              alt={project.title} 
+            <ImageWithSkeleton
+              src={project.image}
+              alt={project.title}
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent pointer-events-none"></div>
@@ -262,10 +263,9 @@ export function ProjectPage() {
                       
                       {/* Screen Content */}
                       <div className="w-full h-full relative overflow-hidden z-10 bg-neutral-950">
-                        <img 
-                          src={item.image} 
-                          alt={item.title} 
-                          loading="lazy"
+                        <ImageWithSkeleton
+                          src={item.image}
+                          alt={item.title}
                           className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-[1.02]"
                         />
                         {/* Zoom overlay on hover */}
@@ -338,10 +338,9 @@ export function ProjectPage() {
 
                       {/* Mockup Image Area */}
                       <div className="w-full relative overflow-hidden bg-black flex items-center justify-center">
-                        <img 
-                          src={item.image} 
-                          alt={item.title} 
-                          loading="lazy"
+                        <ImageWithSkeleton
+                          src={item.image}
+                          alt={item.title}
                           className="w-full h-auto block transition-transform duration-700 ease-in-out scale-100 group-hover:scale-[1.005]"
                         />
                         {/* Zoom overlay on hover */}
@@ -370,11 +369,9 @@ export function ProjectPage() {
                     onClick={() => setActiveImage(imgSrc)}
                     className="w-full bg-[#0a0b14]/50 rounded-xl overflow-hidden relative border border-neutral-800 shadow-xl glass-card group cursor-zoom-in"
                   >
-                    <img 
-                      src={imgSrc} 
-                      alt={`${project.title} screenshot ${idx + 1}`} 
-                      loading="lazy"
-                      decoding="async"
+                    <ImageWithSkeleton
+                      src={imgSrc}
+                      alt={`${project.title} screenshot ${idx + 1}`}
                       className="w-full h-auto block transition-transform duration-700 ease-in-out scale-100 group-hover:scale-[1.02]"
                     />
                   </div>
@@ -415,9 +412,10 @@ export function ProjectPage() {
               className="relative max-w-full max-h-[85vh] overflow-hidden rounded-2xl border border-neutral-800/80 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <img 
-                src={activeImage} 
-                alt="Enlarged screenshot" 
+              <ImageWithSkeleton
+                src={activeImage!}
+                alt="Enlarged screenshot"
+                wrapperClassName="relative max-w-full max-h-[85vh]"
                 className="max-w-full max-h-[85vh] object-contain select-none"
               />
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-black/60 backdrop-blur-md rounded-full border border-neutral-800 text-xs text-neutral-400 font-sans tracking-wide pointer-events-none">

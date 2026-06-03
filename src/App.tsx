@@ -7,6 +7,7 @@ import { Experience } from './components/Experience'
 import { Skills } from './components/Skills'
 import { Footer } from './components/Footer'
 import { PersistentBackground } from './components/PersistentBackground'
+import { SkeletonRouteFallback } from './components/Skeleton'
 
 import { useRef, useEffect, lazy, Suspense } from 'react'
 import { useLocation } from 'react-router-dom'
@@ -101,12 +102,12 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="project/:projectId" element={
-            <Suspense fallback={<div className="min-h-screen w-full flex items-center justify-center text-neutral-500">Loading details...</div>}>
+            <Suspense fallback={<SkeletonRouteFallback />}> 
               <ProjectPage />
             </Suspense>
           } />
           <Route path="projects" element={
-            <Suspense fallback={<div className="min-h-screen w-full flex items-center justify-center text-neutral-500">Loading projects...</div>}>
+            <Suspense fallback={<SkeletonRouteFallback itemCount={6} />}> 
               <AllProjects />
             </Suspense>
           } />
