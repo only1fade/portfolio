@@ -45,14 +45,13 @@ export function ImageWithSkeleton({ src, alt, className = "", wrapperClassName =
 
   return (
     <div className={`relative overflow-hidden ${wrapperClassName}`}>
-      {!loaded && <div className="absolute inset-0 animate-pulse bg-neutral-800/80" aria-hidden="true" />}
       <img
         src={src}
         alt={alt}
         loading="lazy"
         decoding="async"
         onLoad={() => setLoaded(true)}
-        className={`${className} transition-opacity duration-500 ease-out ${loaded ? "opacity-100" : "opacity-0"}`}
+        className={`${className} transition-all duration-500 ease-out ${loaded ? "opacity-100 blur-0 scale-100" : "opacity-90 blur-sm scale-150"}`}
         {...props}
       />
     </div>
