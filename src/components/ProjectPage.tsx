@@ -185,7 +185,7 @@ export function ProjectPage() {
         </Link>
 
         {project.image && (
-          <div className="w-full h-[40vh] md:h-[60vh] bg-neutral-900 rounded-2xl overflow-hidden mb-12 relative border border-neutral-800 shadow-2xl glass-card">
+            <div className="w-full h-[40vh] md:h-[60vh] bg-transparent rounded-2xl overflow-hidden mb-12 relative border border-neutral-800 shadow-2xl glass-card">
             <ImageWithSkeleton
               src={project.image}
               alt={project.title}
@@ -221,7 +221,7 @@ export function ProjectPage() {
           </div>
         </div>
 
-        <div className="h-px w-full bg-neutral-800/60 mb-10"></div>
+        
 
         <div className="prose prose-invert max-w-none mb-16">
           <p className="text-lg md:text-xl text-neutral-300 leading-relaxed font-sans font-light">
@@ -262,7 +262,7 @@ export function ProjectPage() {
                       </div>
                       
                       {/* Screen Content */}
-                      <div className="w-full h-full relative overflow-hidden z-10 bg-neutral-950">
+                      <div className="w-full h-full relative overflow-hidden z-10 bg-transparent">
                         <ImageWithSkeleton
                           src={item.image}
                           alt={item.title}
