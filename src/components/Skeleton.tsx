@@ -1,4 +1,5 @@
-import { ImgHTMLAttributes, useState } from "react";
+import { useState } from "react";
+import type { ImgHTMLAttributes } from "react";
 
 type SkeletonProps = {
   className?: string;
