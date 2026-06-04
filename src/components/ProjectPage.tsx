@@ -185,11 +185,12 @@ export function ProjectPage() {
         </Link>
 
         {project.image && (
-          <div className="w-full h-[40vh] md:h-[60vh] bg-neutral-900 rounded-2xl overflow-hidden mb-12 relative border border-neutral-800 shadow-2xl glass-card">
+          <div className="w-full h-[40vh] md:h-[60vh] rounded-2xl overflow-hidden mb-12 relative border border-neutral-800 shadow-2xl glass-card">
             <ImageWithSkeleton
               src={project.image}
               alt={project.title}
               className="w-full h-full object-cover"
+              wrapperClassName="absolute inset-0"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent pointer-events-none"></div>
           </div>
@@ -267,6 +268,7 @@ export function ProjectPage() {
                           src={item.image}
                           alt={item.title}
                           className="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-[1.02]"
+                          wrapperClassName="absolute inset-0"
                         />
                         {/* Zoom overlay on hover */}
                         <div className="absolute inset-0 bg-purple-950/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -342,6 +344,7 @@ export function ProjectPage() {
                           src={item.image}
                           alt={item.title}
                           className="w-full h-full object-cover object-center block transition-transform duration-700 ease-in-out scale-100 group-hover:scale-[1.005]"
+                          wrapperClassName="absolute inset-0"
                         />
                         {/* Zoom overlay on hover */}
                         <div className="absolute inset-0 bg-purple-950/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
