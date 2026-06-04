@@ -185,7 +185,7 @@ export function ProjectPage() {
         </Link>
 
         {project.image && (
-            <div className="w-full h-[40vh] md:h-[60vh] bg-transparent rounded-2xl overflow-hidden mb-12 relative border border-neutral-800 shadow-2xl glass-card">
+          <div className="w-full h-[40vh] md:h-[60vh] bg-neutral-900 rounded-2xl overflow-hidden mb-12 relative border border-neutral-800 shadow-2xl glass-card">
             <ImageWithSkeleton
               src={project.image}
               alt={project.title}
@@ -221,7 +221,7 @@ export function ProjectPage() {
           </div>
         </div>
 
-        
+        <div className="h-px w-full bg-neutral-800/60 mb-10"></div>
 
         <div className="prose prose-invert max-w-none mb-16">
           <p className="text-lg md:text-xl text-neutral-300 leading-relaxed font-sans font-light">
@@ -262,11 +262,11 @@ export function ProjectPage() {
                       </div>
                       
                       {/* Screen Content */}
-                      <div className="w-full h-full relative overflow-hidden z-10 bg-transparent">
+                      <div className="w-full h-full relative overflow-hidden z-10">
                         <ImageWithSkeleton
                           src={item.image}
                           alt={item.title}
-                          className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-[1.02]"
+                          className="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-[1.02]"
                         />
                         {/* Zoom overlay on hover */}
                         <div className="absolute inset-0 bg-purple-950/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -337,11 +337,11 @@ export function ProjectPage() {
                       </div>
 
                       {/* Mockup Image Area */}
-                      <div className="w-full relative overflow-hidden bg-black flex items-center justify-center">
+                      <div className="w-full relative overflow-hidden flex items-center justify-center">
                         <ImageWithSkeleton
                           src={item.image}
                           alt={item.title}
-                          className="w-full h-auto block transition-transform duration-700 ease-in-out scale-100 group-hover:scale-[1.005]"
+                          className="w-full h-full object-cover object-center block transition-transform duration-700 ease-in-out scale-100 group-hover:scale-[1.005]"
                         />
                         {/* Zoom overlay on hover */}
                         <div className="absolute inset-0 bg-purple-950/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
