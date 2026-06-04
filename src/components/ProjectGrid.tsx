@@ -86,7 +86,7 @@ export function ProjectGrid() {
               <Link to={`/project/${project.id}`} className="block h-full group">
                 <div className="glass-card glass-card-hover rounded-xl overflow-hidden h-full flex flex-col md:flex-row cursor-pointer bg-neutral-900/40 border border-neutral-800 backdrop-blur-sm transition-all duration-300 hover:border-neutral-700 hover:bg-neutral-800/50 hover:shadow-2xl hover:shadow-purple-900/20">
                   {/* Project Image Area */}
-                  <div className="w-full md:w-1/2 h-64 md:h-auto min-h-[300px] md:min-h-[400px] bg-transparent relative overflow-hidden transition-colors duration-500 flex items-center justify-center shrink-0 border-b md:border-b-0 md:border-r border-neutral-800/50">
+                  <div className="w-full md:w-1/2 h-64 md:h-auto min-h-[300px] md:min-h-[400px] bg-neutral-950/80 relative overflow-hidden transition-colors duration-500 flex items-center justify-center shrink-0 border-b md:border-b-0 md:border-r border-neutral-800/50">
                     {project.image ? (
                       <ImageWithSkeleton
                         src={project.image}
